@@ -10,17 +10,18 @@ function addTarefa(){
     // validar entrada da informação
     if ((valorInput!=="") && (valorInput !== null) && (valorInput !== undefined)){
         ++ contador;
-        let novoItem = `<div id="${contador}" class="item">
-        <div onclick="marcarTarefa(${contador})" class="item-icone">
-            <i id="icone_${contador}"   class="mdi mdi-circle-outline"></i>
-        </div>
-        <div onclick="marcarTarefa(${contador})" class="item-nome">
-            ${valorInput}
-        </div>
-        <div class="item-botao">
-            <button onclick="deletar(${contador})" class="delete"><i class="mdi mdi-delete"></i>Apagar</button>
-        </div>
-    </div>`;
+        let novoItem = 
+        `<div id="${contador}" class="item">
+            <div onclick="marcarTarefa(${contador})" class="item-icone">
+                <i id="icone_${contador}"   class="mdi mdi-circle-outline"></i>
+            </div>
+            <div onclick="marcarTarefa(${contador})" class="item-nome">
+                ${valorInput}
+            </div>
+            <div class="item-botao">
+                <button onclick="deletar(${contador})" class="delete"><i class="mdi mdi-delete"></i>Apagar</button>
+            </div>
+        </div>`;
 
         // Adcionando uma Tarefa
         main.innerHTML += novoItem;
